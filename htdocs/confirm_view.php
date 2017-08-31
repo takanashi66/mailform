@@ -42,6 +42,7 @@
       <input type="hidden" name="textarea" value="<? echo $textarea; ?>">
       <input type="submit" value="戻って修正">
     </form>
+    
     <form action="send.php" method="post">
       <input type="hidden" name="name" value="<? echo $name; ?>">
       <input type="hidden" name="mail" value="<? echo $mail; ?>">

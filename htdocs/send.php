@@ -29,9 +29,10 @@
 		}
   	
   	$tel = hsc($_POST['tel']);
-  	if(empty($name)){
+  	if(empty($tel)){
       //エラーだったらメッセージを配列に入れる
       $error['tel'] = "値が空です!!!";
+      
 		}else if(!preg_match("/^(0{1}\d{1,4}-{0,1}\d{1,4}-{0,1}\d{4})$/", $tel)){
   		$error['tel'] = "電話番号の形式が正しくありません!!!";
 		}

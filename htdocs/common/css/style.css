@@ -318,6 +318,7 @@ input[type=submit] {
 
 .confirm_view {
 	width: 100%;
+	margin-bottom: 30px;
 }
 
 .confirm_view th,
