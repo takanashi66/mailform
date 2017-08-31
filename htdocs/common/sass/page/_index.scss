@@ -1,0 +1,63 @@
+.form{
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px;
+  
+  form{
+    input,textarea{
+      width: 100%;
+      display: block;
+      border: none;
+      background: none;
+      border-radius: 0;
+      padding: 0;
+      margin: 0;
+      
+      border: solid 1px #ccc;
+      padding: .8em .5em;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      
+      &:focus{
+        outline: none;
+      }
+    }
+    
+    input[type=submit]{
+      &:hover{
+        background-color: #ccc;
+      }
+    }
+    
+    .err{
+      color: #f00;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      margin-top: -15px;
+    }
+  }
+}
+
+
+.confirm_view{
+  width: 100%;
+  
+  th,td{
+    border: solid 1px #ccc;
+    text-align: left;
+    padding: .8em 1em;
+    font-size: 1.5rem;
+  }
+  
+  th{
+    white-space: nowrap;
+    background-color: #f2f2f2;
+  }
+}
+
+ .errmsg{
+   font-size: 1.6rem;
+   line-height: 1.5;
+   text-align: center;
+ }
+  
