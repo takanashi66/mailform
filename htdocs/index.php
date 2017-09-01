@@ -18,15 +18,15 @@
         <input type="radio" id="contact" name="radio" value="contact" 
         <?php
           if(isset($radio) && $radio == "contact"){
-  					echo "checked";
-  				}
+            echo "checked";
+          }
         ?>
         ><label for="contact">お問い合わせ</label>
         <input type="radio" id="document" name="radio" value="document" 
         <?php
           if(isset($radio) && $radio == "document"){
-  					echo "checked";
-  				}
+            echo "checked";
+          }
         ?>
         ><label for="document">資料請求</label>
       </div>
