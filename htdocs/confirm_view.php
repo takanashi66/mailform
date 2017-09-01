@@ -14,11 +14,39 @@
     <table class="confirm_view">
       <tr>
         <th>お問い合わせ内容</th>
-        <td><?php echo $radio; ?></td>
+        <td><?php echo $radio_text; ?></td>
       </tr>
       <tr>
         <th>お問い合わせ種別</th>
-        <td><?php echo $checkbox; ?></td>
+        <td>
+          <?php
+/*
+            foreach($checkbox as $checkbox_val){
+              
+              switch($checkbox_val){
+                case "estimate":
+                  echo "見積もり";
+                  break;
+                
+                case "question":
+                  echo "質問";
+                  break;
+                  
+                case "other":
+                  echo "その他";
+                  break;
+                
+                default:
+                  //エラーだったらメッセージを配列に入れる
+                  echo "不正な値です!!!";
+                  break;
+              }
+              
+              echo ", ";
+            }
+*/
+          ?>
+        </td>
       </tr>
       <tr>
         <th>名前</th>
@@ -43,6 +71,7 @@
     </table>
     <form action="confirm.php" method="post">
       <input type="hidden" name="flg" value="1">
+      <input type="hidden" name="checkbox_array" value='<? echo serialize($checkbox); ?>'>
       <input type="hidden" name="name" value="<? echo $name; ?>">
       <input type="hidden" name="mail" value="<? echo $mail; ?>">
       <input type="hidden" name="tel" value="<? echo $tel; ?>">

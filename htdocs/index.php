@@ -30,6 +30,7 @@
         ?>
         ><label for="document">資料請求</label>
       </div>
+      
       <?php
         if(isset($error) && !empty($error['radio'])){
           echo'<p class="err">'.$error['radio'].'</p>';
@@ -37,9 +38,9 @@
       ?>
       
       <div class="checkbox">
-        <input type="checkbox" id="checkbox1" name="checkbox[]" value="estimate"><label for="checkbox1">見積もり</label>
-        <input type="checkbox" id="checkbox2" name="checkbox[]" value="question"><label for="checkbox2">質問</label>
-        <input type="checkbox" id="checkbox3" name="checkbox[]" value="other"><label for="checkbox3">その他</label>
+        <input type="checkbox" id="checkbox1" name="checkbox[]" value="estimate" <?php if(!empty($_POST['checkbox_array']) && in_array("estimate", unserialize($_POST['checkbox_array']))) echo "checked" ?>><label for="checkbox1">見積もり</label>
+        <input type="checkbox" id="checkbox2" name="checkbox[]" value="question" <?php if(!empty($_POST['checkbox_array']) && in_array("question", unserialize($_POST['checkbox_array']))) echo "checked" ?>><label for="checkbox2">質問</label>
+        <input type="checkbox" id="checkbox3" name="checkbox[]" value="other" <?php if(!empty($_POST['checkbox_array']) && in_array("other", unserialize($_POST['checkbox_array']))) echo "checked" ?>><label for="checkbox3">その他</label>
       </div>
       <?php
         if(isset($error) && !empty($error['checkbox'])){
