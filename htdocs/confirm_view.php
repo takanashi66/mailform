@@ -13,6 +13,14 @@
   <div class="form">
     <table class="confirm_view">
       <tr>
+        <th>お問い合わせ内容</th>
+        <td><?php echo $radio; ?></td>
+      </tr>
+      <tr>
+        <th>お問い合わせ種別</th>
+        <td><?php echo $checkbox; ?></td>
+      </tr>
+      <tr>
         <th>名前</th>
         <td><?php echo $name; ?></td>
       </tr>

@@ -340,5 +340,47 @@ input[type=submit] {
 	text-align: center;
 }
 
+.radio {
+	display: -ms-flexbox;
+	display: flex;
+	border: solid 1px #ccc;
+	margin-bottom: 20px;
+	padding: 1.5em 1em;
+}
+
+.radio input[type=radio] {
+	width: auto;
+	margin: 0;
+	padding: 0;
+	margin-right: 10px;
+}
+
+.radio label {
+	font-size: 1.5rem;
+	line-height: 1;
+	margin-right: 20px;
+}
+
+.checkbox {
+	display: -ms-flexbox;
+	display: flex;
+	border: solid 1px #ccc;
+	margin-bottom: 20px;
+	padding: 1.5em 1em;
+}
+
+.checkbox input[type=checkbox] {
+	width: auto;
+	margin: 0;
+	padding: 0;
+	margin-right: 10px;
+}
+
+.checkbox label {
+	font-size: 1.5rem;
+	line-height: 1;
+	margin-right: 20px;
+}
+
 
 /*# sourceMappingURL=../map/style.css.map */

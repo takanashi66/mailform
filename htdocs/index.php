@@ -14,6 +14,39 @@
     
     <form action="confirm.php" method="post">
       
+      <div class="radio">
+        <input type="radio" id="contact" name="radio" value="contact" 
+        <?php
+          if(isset($radio) && $radio == "contact"){
+  					echo "checked";
+  				}
+        ?>
+        ><label for="contact">お問い合わせ</label>
+        <input type="radio" id="document" name="radio" value="document" 
+        <?php
+          if(isset($radio) && $radio == "document"){
+  					echo "checked";
+  				}
+        ?>
+        ><label for="document">資料請求</label>
+      </div>
+      <?php
+        if(isset($error) && !empty($error['radio'])){
+          echo'<p class="err">'.$error['radio'].'</p>';
+        }
+      ?>
+      
+      <div class="checkbox">
+        <input type="checkbox" id="checkbox1" name="checkbox[]" value="estimate"><label for="checkbox1">見積もり</label>
+        <input type="checkbox" id="checkbox2" name="checkbox[]" value="question"><label for="checkbox2">質問</label>
+        <input type="checkbox" id="checkbox3" name="checkbox[]" value="other"><label for="checkbox3">その他</label>
+      </div>
+      <?php
+        if(isset($error) && !empty($error['checkbox'])){
+          echo'<p class="err">'.$error['checkbox'].'</p>';
+        }
+      ?>
+      
       <input type="text" name="name" placeholder="名前" value="<? echo isset($name) ? $name : ''; ?>">
       <?php
         if(isset($error) && !empty($error['name'])){
