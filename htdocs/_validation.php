@@ -23,6 +23,7 @@ if(empty($radio)){
 }
 
 $checkbox = $_POST['checkbox'];
+var_dump($checkbox);
 if(empty($checkbox)){
   //エラーだったらメッセージを配列に入れる
   $error['checkbox'] = "選択されていません!!!";

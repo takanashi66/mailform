@@ -37,13 +37,22 @@
       ?>
       
       <div class="checkbox">
-        <input type="checkbox" id="checkbox1" name="checkbox[]" value="estimate"><label for="checkbox1">見積もり</label>
-        <input type="checkbox" id="checkbox2" name="checkbox[]" value="question"><label for="checkbox2">質問</label>
-        <input type="checkbox" id="checkbox3" name="checkbox[]" value="other"><label for="checkbox3">その他</label>
+        <?php
+          if(isset($_POST["checkbox_arry"])){
+            $a = unserialize($_POST["checkbox_arry"]);
+          }else{
+            $a = array();
+          }
+          
+        ?>
+        <input type="checkbox" id="checkbox1" name="checkbox[]" value="estimate" <?php if(in_array("estimate", $a)) echo "checked" ?>><label for="checkbox1">見積もり</label>
+        <input type="checkbox" id="checkbox2" name="checkbox[]" value="question" <?php if( in_array("question", $a)) echo "checked" ?>><label for="checkbox2">質問</label>
+        <input type="checkbox" id="checkbox3" name="checkbox[]" value="other" <?php if(in_array("other", $a)) echo "checked" ?>><label for="checkbox3">その他</label>
       </div>
       <?php
         if(isset($error) && !empty($error['checkbox'])){
           echo'<p class="err">'.$error['checkbox'].'</p>';
+          var_dump($error);
         }
       ?>
       

@@ -16,14 +16,6 @@
   	
 		
 		$flg = hsc($_POST['flg']);
-		
-		//連想配列のキーを変数にして、値を入れる
-/*
-    foreach ($_POST as $key => $val){
-      //$keyの前に$をつけると配列のkeyを変数として宣言できる
-      $$key = $val;
-    }
-*/
     if($flg == 1){
       require_once 'index.php';
     }else{
